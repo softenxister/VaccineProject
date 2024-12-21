@@ -34,9 +34,6 @@ exports.protect = async (req, res, next) => {
     }
 
     req.user = user;
-
-    console.log('Auth header:', req.headers.authorization);
-    console.log('Extracted token:', token);
     
     next();
   } catch(err) {
